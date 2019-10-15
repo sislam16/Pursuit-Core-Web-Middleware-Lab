@@ -11,10 +11,10 @@ app.use(bodyParser.urlencoded({
 
 const isAnimal = (req, res, next) => {
     let animal = req.query.animal
+    console.log(animal)
     const registeredAnimals = ['lion','turtle','jellyfish','shark','penguin','cow','goat']
-    for(let animal of registeredAnimals ) {
         if(registeredAnimals.includes(animal)){
-            res.json({
+            res.send({
                 status: "success",
                 message: true
             })
@@ -23,7 +23,6 @@ const isAnimal = (req, res, next) => {
             next();
         }
     }
-}
 
 const unavailableAnimal = (req, res, next) => {
     res.json({

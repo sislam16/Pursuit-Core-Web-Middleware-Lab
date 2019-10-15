@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src = 'middlewarelab.js'></script>
-    <title>Document</title>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <script src = './middlewarelab.js'></script>
+    <title>Middleware Lab</title>
 </head>
 <body>
     <h1>Middleware Lab</h1>
-    <div id = 'animal'>
-        <input type = 'text' placeholder="Submit animal here" />
+    <div id = 'randomAnimal'>
+        <h3>Submit Random Animal</h3>
+        <input type = 'text' placeholder="Submit animal here" id ='animalName' />
         <button id ='animal'>Submit</button>
     </div>
 
     <div id = 'random-number'>
+        <h3>Get random number</h3>
        <input type = 'number'/>
        <button id = 'number'>Submit number</button> 
+    </div>
+
+    <div>
+        <h3>Queues</h3>
     </div>
 </body>
 </html>
